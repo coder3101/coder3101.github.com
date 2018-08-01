@@ -8,7 +8,7 @@ I can be reached in all the ways, thanks to all the social handles available the
 
 
 
-However, I am not very frequent on social handles. and the best way is to reach me is email or  this form ( It sends me a mail : P ) 
+However, I am not very frequent on social handles. So, the best way is to reach me is email or this form (It sends me a mail) 
 
 I am already so busy with my works, the only thing I can do is guide you to the correct path. So, Please prevent Ideas or Project discussions in messages.
 

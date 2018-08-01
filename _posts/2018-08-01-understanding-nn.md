@@ -2,7 +2,7 @@
 title: Understanding Neural Networks
 categories: NeuralNets
 mathjax: true
-feature_img: sleek
+featured-img: sleek
 ---
 
 ## What is a Neural Network ?

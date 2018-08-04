@@ -59,7 +59,7 @@ Here is the graph of Relu.
 
 <img src="https://github.com/coder3101/coder3101.github.com/raw/master/in-post_imgs/understanding-ff-nn/relu.jpeg"/>
 
-<p>
+</p>
 
 *Note : Relu function is a non-linear function and is not differentiable at $x=0$, So, we assume derivative of relu at $x=0$ as zero*
 

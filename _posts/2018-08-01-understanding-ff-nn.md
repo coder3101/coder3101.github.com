@@ -77,9 +77,11 @@ Here is how it looks mathematically,
 
 $w^1_{out} =  x_1 * w_1$
 
-<br>
+<br><br>
 
 $w^2_{out} =  x_2 * w_2$
+
+<br>
 
 <br>
 
@@ -95,11 +97,21 @@ Inside the neuron following calculations take place.
 
 $a_1 = w^1_{out} + w^2_{out} + w^3_{out} + b$
 
-<br>
+<br><br>
 
 $z_1 = relu (a_1)$
 
 </p>
+
+
+
+## Implementation
+
+In reality the things are not that easy like *pipes* and input flowing one by one. Rather all the things are encapsulated under the shades of mathematics for faster computations. Let me explain why? 
+
+If we were to multiply all those weights with inputs and add the biases all one by one normally, the complete computation will comsume much more time and we couldn't paralellize the operations on GPU's.
+
+We use Linear Algebra here that simplifies the complete thing and brings down the computation speed  
 
 
 

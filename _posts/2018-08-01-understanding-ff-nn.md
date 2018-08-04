@@ -105,6 +105,12 @@ $z_1 = relu (a_1)$
 
 
 
+In more more generalized way it is all represented as
+
+$$z_1 = relu( (\sum_{i=1}^n x_i * w_i) + b)$$
+
+Here `n` is the number of inputs to the neuron.
+
 ## Implementation
 
 In reality the things are not that easy like *pipes* and input flowing one by one. Rather all the things are encapsulated under the shades of mathematics for faster computations. Let me explain why? 
@@ -113,7 +119,15 @@ If we were to multiply all those weights with inputs and add the biases all one 
 
 We use Linear Algebra here that simplifies the complete thing and brings down the computation speed.
 
-So we represent `input` as a vector of 
+So we represent `input` as a matrix of values as $\begin {bmatrix}x_1 & x_2 & x_3 \end{bmatrix}$  of shape $(1,3)$.
+
+We also pack all the `weights` as a matrix of values as $\begin{bmatrix}w_1\\w_2\\w_3\end{bmatrix}$ of shape $(3,1)$.
+
+Now we can matrix multiply `input * weights` and output will be of shape $(1,1)$ .
+
+We now add the bias term and activate with element-wise relu to $(1,1)$ and we will have one output `z1` in a amatrix of $(1,1)$. This idea of vecorization will be useful when study the complete neural network in maybe a next post.  
+
+ 
 
   
 

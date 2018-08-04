@@ -1,5 +1,5 @@
 ---
-title: Understanding Feed-Forward Network
+title: Understanding Feed Forward Neural Networks
 categories: NeuralNets
 mathjax: true
 featured-img: sleek
@@ -17,4 +17,15 @@ From Wikipedia
 
 So, this biological definition is pretty acceptable for Artificial Neurons as well. Artificial Neurons also recieves some values, processes and then transmits the results.
 
-There is no standard way of visualizing a neuron in artificial neural networks. I assume a **neuron as a bucket that simply stores any real number**. So, stick to this Idea, It will get more clear as you progress in the post.
+There is no standard way of visualizing a neuron in artificial neural networks. I assume a **neuron as a mathematical function that gets some input and produces some output**. So, stick to this Idea, It will get more clear as you progress in the post.
+
+
+
+## Neuron's Calculation
+
+As I mentioned above **a neuron is a mathematical function**. So what is the input to that neuron and what is the output and what mathematical relation converts input to output?.
+
+Here I will answer those things. Let's begin :
+
+![](https://github.com/coder3101/coder3101.github.io/coder3101.github.com/in-post_imgs/understanding-ff-nn/NeuronExpl.jpg)
+

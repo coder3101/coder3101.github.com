@@ -61,11 +61,13 @@ Here is the graph of Relu.
 
 </p>
 
+
+
 *Note : Relu function is a non-linear function and is not differentiable at $x=0$, So, we assume derivative of relu at $x=0$ as zero*
 
 
 
-##Neuron's Calculation
+## Neuron's Calculation
 
 A Neuron represents a simple function that takes in value(s) from *pipes* and adds all the values including the *bias term* and then applies the **activation function** .
 
@@ -75,7 +77,11 @@ Here is how it looks mathematically,
 
 $w^1_{out} =  x_1 * w_1$
 
+
+
 $w^2_{out} =  x_2 * w_2$
+
+
 
 $w^3_{out} =  x_3 * w_3$
 
@@ -88,6 +94,8 @@ Inside the neuron following calculations take place.
 <p align="center">
 
 $a_1 = w^1_{out} + w^2_{out} + w^3_{out} + b$
+
+
 
 $z_1 = relu (a_1)$
 

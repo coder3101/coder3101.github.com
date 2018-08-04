@@ -31,19 +31,33 @@ Here We will look at those deails. This Picture depicts how a neuron gets input(
 
 </p>
 
-![](https://github.com/coder3101/coder3101.github.com/raw/master/in-post_imgs/understanding-ff-nn/NeuronExpl.jpg "A Single Neuron")
+Now here are some terms called *weights* which are `w1,w2,w3` , *inputs* `x1,x2,x3` and *biases* `b`.
 
-Now here are some terms called *weights* which are `w1,w2,w3` , *inputs* `x1,x2,x3` and *biases* `b`. (Not visible in the picture)
-
-**Weight(s)** are the *imaginary lines* that connect the neurons together. When we will look at the complete Neural Network in the end it will be more clear.For Now You can assume that those lines that connect neurons together are *pipes* through which input values`x` flows. When an input flows through that *pipe* the input is scaled by a number `w` . Such that in the end the result is `w * x`. This `w` is uniquely associated with each weight (pipe) and can be any real number.  (*Say x1 = 5 and w1 = 0.5, then the value that reaches the neuron is x1* * *w1 = 2.5*)
+**Weight(s)** are the *imaginary lines* that connect the neurons together. You can assume that those lines that connect neurons together are *pipes* through which input values `x` flows. When an input flows through that *pipe* the input is scaled by a number `w` . Such that in the end the result is `w * x`. This `w` is uniquely associated with each weight (pipe) and can be any real number.  Say x1 = 5 and w1 = 0.5, then the value that reaches the neuron is x1 * w1 = 2.5
 
 **Inputs(s)** are the values we feed into the neuron or the outputs of the previous neurons. In the above example we assume that `x1, x2, x3` are the inputs we provide to the neuron. However we can also feed the output `z1` produced by the this neuron as input for next neuron as we do in Multi-layered Neural Networks. 
 
-**Biase(s)** each neuron is associated with a unique bias term. The Value of this temr `b` can be any real number. We can even skip this term in some cases. The work of this term will be clear when we study the actual calculation that out neuron does. So, Read with Patience and remember to share it with others.
+**Biase(s)** each neuron is associated with a unique bias term. The Value of this term `b` can be any real number. We can even skip this term in some cases. The work of this term will be clear when we study the actual calculation that out neuron does. So, Read with Patience and remember to share it with others.
 
-There is one more thing called Activation Function that We Choose this is the function that generates the output `z1`.
+There is one more thing called Activation Function that we can choose and this is the function the output of this function is  `z1` the final output of the neuron.
 
-**Activation Function** are functions whose Domain is { ${-\infty, +\infty}$ } and are continious and differentiable everywhere (exceptions exists to differentiablity like Relu). In very simple words, the activation function must be defined for all values of input and the graph of which should not break or abruptly change directions. Most simplest activation function we can use is *Relu* expanded as Rectified Linear Unit.
+**Activation Function** are functions whose Domain is { ${-\infty, +\infty}$ } and are continious and differentiable everywhere (exceptions exists to differentiablity like Relu). In very simple words, the activation function must be defined for all values of input and the graph of which should not break or abruptly change directions. Most widely used activation function today is *Relu* expanded as Rectified Linear Unit.
+
+Mathematically,
+
+​						$relu(x) = x^+ = max(0, x)$
+
+​( Relu function is a non-linear function and is not differentiable at $x=0$, So, we assume derivative of relu 0 at $x=0$ )
+
+The output of relu is very simple. For all the positive values the result is identity for negative values it is always zero. 
+
+Here is the graph of Relu.
+
+<p align="center">
+
+<img src="https://github.com/coder3101/coder3101.github.com/raw/master/in-post_imgs/understanding-ff-nn/relu.jpeg"/>
+
+<p>
 
 Now Comes **Calculation** :
 

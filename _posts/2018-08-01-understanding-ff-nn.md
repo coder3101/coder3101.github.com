@@ -85,7 +85,7 @@ $w^2_{out} =  x_2 * w_2$
 
 $w^3_{out} =  x_3 * w_3$
 
-<p>
+</p>
 
 From our analogy of *weights* as *pipes* when `x1, x2, x3` flow through the weights `w1, w2, w3` the outputs that will reach to the neuron are denoted as $w^1_{out}, w^2_{out}, w^3_{out}$ respectively. The above mathematical calculations denote these operations. 
 
@@ -100,6 +100,8 @@ $a_1 = w^1_{out} + w^2_{out} + w^3_{out} + b$
 $z_1 = relu (a_1)$
 
 </p>
+
+
 
 
 

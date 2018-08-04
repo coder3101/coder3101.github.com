@@ -89,7 +89,7 @@ $w^3_{out} =  x_3 * w_3$
 
 </p>
 
-From our analogy of *weights* as *pipes* when `x1, x2, x3` flow through the weights `w1, w2, w3` the outputs that will reach to the neuron are denoted as $w^1_{out}, w^2_{out}, w^3_{out}​$  respectively. The above mathematical calculations denote these operations. 
+From our analogy of *weights* as *pipes* when `x1, x2, x3` flow through the weights `w1, w2, w3` the outputs that will reach to the neuron are denoted as $w^1_{out}, w^2_{out}, w^3_{out}$  respectively. The above mathematical calculations denote these operations. 
 
 Inside the neuron following calculations take place.
 
@@ -111,7 +111,11 @@ In reality the things are not that easy like *pipes* and input flowing one by on
 
 If we were to multiply all those weights with inputs and add the biases all one by one normally, the complete computation will comsume much more time and we couldn't paralellize the operations on GPU's.
 
-We use Linear Algebra here that simplifies the complete thing and brings down the computation speed  
+We use Linear Algebra here that simplifies the complete thing and brings down the computation speed.
+
+So we represent `input` as a vector of 
+
+  
 
 
 

@@ -27,4 +27,4 @@ As I mentioned above **a neuron is a mathematical function**. So what is the inp
 
 Here I will answer those things. Let's begin :
 
-![Neuron](https://i.imgur.com/rETzmfE.jpg)
+![Neuron](https://github.com/coder3101/coder3101.github.com/raw/master/in-post_imgs/understanding-ff-nn/NeuronExpl.jpg, "Neuron")

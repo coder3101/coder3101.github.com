@@ -77,11 +77,11 @@ Here is how it looks mathematically,
 
 $w^1_{out} =  x_1 * w_1$
 
-
+<br>
 
 $w^2_{out} =  x_2 * w_2$
 
-
+<br>
 
 $w^3_{out} =  x_3 * w_3$
 
@@ -95,7 +95,7 @@ Inside the neuron following calculations take place.
 
 $a_1 = w^1_{out} + w^2_{out} + w^3_{out} + b$
 
-
+<br>
 
 $z_1 = relu (a_1)$
 

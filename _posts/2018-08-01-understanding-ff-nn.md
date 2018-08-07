@@ -89,7 +89,7 @@ $w^3_{out} =  x_3 * w_3$
 
 </p>
 
-From our analogy of weights as pipes when `x1, x2, x3` flow through the weights `w1, w2, w3` the outputs that will reach to the neuron are denoted as $w^1_{out}, w^2_{out}, w^3_{out}$ respectively. The above mathematical calculations denote these operations.
+From our analogy of weights as pipes when `x1, x2, x3` flow through the weights `w1, w2, w3` the outputs that will reach to the neuron are denoted as $w^1_{out} w^2_{out} w^3_{out}$ respectively. The above mathematical calculations denote these operations.
 
 Inside the neuron following calculations take place.
 
@@ -131,7 +131,7 @@ So we represent `input` as a matrix of values as $\begin {bmatrix}x_1 & x_2 & x_
 
 We also pack all the `weights` as a matrix of values as $\begin{bmatrix}w_1 \\\ w_2 \\\ w_3 \end{bmatrix}$ of shape $(3,1)$.
 
-Now we can matrix multiply `input * weights` as  $$\begin {bmatrix}x_1 & x_2 & x_3 \end{bmatrix} * \begin{bmatrix}w_1 \\\ w_2 \\\ w_3 \end{bmatrix}$$.  The output will be of shape $(1,1)$ .
+Now we can matrix multiply `input * weights` .  The output will be of shape $(1,1)$ .
 
 We now add the bias term and activate with element-wise relu to $(1,1)$ and we will have one output `z1` in a matrix of $(1,1)$. This complete idea of *vectorization* will be useful when studying the complete neural network in maybe a next post where we will compute multiple outputs from multiple neurons with a given set of inputs.    
 

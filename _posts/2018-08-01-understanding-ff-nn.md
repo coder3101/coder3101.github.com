@@ -109,9 +109,9 @@ In a more generalized way, it is all represented as
 
 <p align="center">
 
-$a_1 = \sum_{i=1}^n x_i * w_i$
+$a_1 = \sum_{i=1}^n x_i * w_i + b$
 
-$$z_1 = relu( a_1 + b)$$
+$$z_1 = relu( a_1)$$
 
 </p>
 
@@ -131,13 +131,11 @@ So we represent `input` as a matrix of values as $\begin {bmatrix}x_1 & x_2 & x_
 
 We also pack all the `weights` as a matrix of values as $\begin{bmatrix}w_1 \\\ w_2 \\\ w_3 \end{bmatrix}$ of shape $(3,1)$.
 
-Now we can matrix multiply `input * weights` and output will be of shape $(1,1)$ . This $(1,1)$ matrix contains our logit namely $a_1$. 
+Now we can matrix multiply `input * weights` as  $$\begin {bmatrix}x_1 & x_2 & x_3 \end{bmatrix} * \begin{bmatrix}w_1 \\\ w_2 \\\ w_3 \end{bmatrix}$$.  The output will be of shape $(1,1)$ .
 
-We now add the bias term and activate with element-wise relu to $(1,1)$ and we will have one output `z1` in a matrix of $(1,1)$. This idea of vectorization will be useful when studying the complete neural network in maybe a next post where we will compute multiple outputs from multiple neurons with a given set of inputs.    
+We now add the bias term and activate with element-wise relu to $(1,1)$ and we will have one output `z1` in a matrix of $(1,1)$. This complete idea of *vectorization* will be useful when studying the complete neural network in maybe a next post where we will compute multiple outputs from multiple neurons with a given set of inputs.    
 
- 
-
-  
+*vectorization* means converting your task in such a way that it can be done on multiple threads in parallel. In above implementation we converted all the operations in matrix operations that could be easily parallelized.
 
 
 

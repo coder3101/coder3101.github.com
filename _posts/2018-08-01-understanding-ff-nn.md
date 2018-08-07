@@ -137,6 +137,10 @@ We now add the bias term and activate with element-wise relu to $(1,1)$ and we w
 
 *vectorization* means converting your task in such a way that it can be done on multiple threads in parallel. In above implementation we converted all the operations in matrix operations that could be easily parallelized.
 
+In future posts when I explain the Complete Neural Network it will be more clear.
+
+Stay tuned.
+
 
 
 

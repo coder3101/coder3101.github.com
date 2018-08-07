@@ -129,7 +129,7 @@ We use Linear Algebra here that simplifies the complete thing and brings down th
 
 So we represent `input` as a matrix of values as $\begin {bmatrix}x_1 & x_2 & x_3 \end{bmatrix}$  of shape $(1,3)$.
 
-We also pack all the `weights` as a matrix of values as $\begin{bmatrix}w_1 \\ w_2 \\ w_3 \end{bmatrix}$ of shape $(3,1)$.
+We also pack all the `weights` as a matrix of values as $\begin{bmatrix}w_1 \\\ w_2 \\\ w_3 \end{bmatrix}$ of shape $(3,1)$.
 
 Now we can matrix multiply `input * weights` and output will be of shape $(1,1)$ . This $(1,1)$ matrix contains our logit namely $a_1$. 
 

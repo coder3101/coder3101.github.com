@@ -11,6 +11,14 @@ By the end of this post, you will have the in-depth understanding of forward and
 
 This post assumes that you have an basic understanding of activation functions and are familiar with terms like weights and biases. If all these seem alien to you. Read [this](https://coder3101.github.io/understanding-ff-nn/)  and come back here again.
 
+### A Neural Network 
+
+<p align="center">
+
+<img src="https://github.com/coder3101/coder3101.github.com/raw/master/in-post_imgs/understanding-a-complete-neural-net/full-complete-net.jpg">
+
+</p>
+
 
 
  

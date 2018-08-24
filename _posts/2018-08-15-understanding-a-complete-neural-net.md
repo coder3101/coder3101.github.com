@@ -19,13 +19,15 @@ This post assumes that you have an basic understanding of activation functions a
 
 
 
- Before we dive into the the maths and code of it. We need to get familiar with what we mean when we say "*Hidden Layers*" or "*5-layered neural network*" or "*Input layers*" and "*logits*". Let's define them :
+As you are already familiar with what a single neuron computes from my previous post. When we arrange many such neurons such that each neuron gets same input values but have different weights they form a **Layer** (In above picture, Vertical Stack of Neurons is a Layer).
 
-1. **Layers** : As you are already familiar with what a single neuron computes from my previous post. When we arrange many such neurons such that each neuron gets same input values but have different weights they form a layer (In above picture, Vertical Stack of Neurons is a Layer).
-2. **Hidden Layer** : Layers apart from input and output layers are called hidden layers. In this case we have two hidden layers. 
-3. **Input Layer** : The layer that gets value from us is the Input Layer. In the above Picture, three values are placed in the neurons of input layers and those inputs flow through weights all the way upto output layer.
-4. **Ouput Layer :** The Neuron that holds the ouput value by the network is the output layer. It can have any number of Neurons. In the picture above there is only one neuron in the output layer.
-5. **Logits** : The Un-activated value of a neuron is generally referred to as logits. For Example In the last post we talked about Relu activation being applied to weighed sum, if we do not apply that relu the results we have is called logit(s).
+All the layers apart from input and output layers are called **Hidden layers**.
+
+The layer that gets value from us is the **Input Layer**.
+
+The layer of Neurons that hold the ouput values by the network is the **Output Layer**. It can have any number of Neurons. In the picture above there is only one neuron in the output layer.
+
+The Un-activated value of a neuron is generally referred to as **Logits**. For Example In the last post we talked about Relu activation being applied to weighed sum, if we do not apply that relu the results we have is called logit.
 
 ### Some Properties of Layers
 
@@ -54,5 +56,16 @@ But How do we define that $f$ ?
 
 Remember the Complete Neural Network is just a collection of many neurons. So output of complete neural network depends on the output of each neuron.
 
-Now, a Neuron's output depend on 3 things (Weights,bias and Input). We cannot change the Input directly that is fixed. The only way to Change the Output is to Change the Weights and biases of the neuron. Great, but how do we choose values of Weights and biases that gives the expected results. Here comes the training part, We use an algorithm called back-propagation that fine tunes the values of all weights and biases of the all the neurons. These weights and baises are trainable parameter.So, We Initially set some random values to weights and biases and let the training fine tune it for us. We will talk Back Propagation in  some other Post.
+Now, a Neuron's output depend on 3 things (Weights,bias and Input). We cannot change the Input directly that is fixed. The only way to change the output is to change the weights and biases of individual neuron. Great, but how do we choose values of Weights and biases that gives the expected results. Here comes the training part, We use an algorithm called Gradient Descent that fine tunes the values of all weights and biases of the all the neurons. So, We Initially set some random values to weights and biases and let the training fine tune it for us. We will talk about Back Propagation and Gradient Descent in  some other Post.
 
+So choosing all the possible values of all the weights and biases will give us all possible definition of $f$. This way our Neural network can approximate all most all $f$, and thus it is called *Universal Function Approximator*
+
+*Please Note : I do not mean the above Neural Network in the Picture can approximate all the functions. It will fail to approximate complex functions so to overcome this we build more sophisticated networks with Hundred of Layers and many neurons with regularization*.
+
+
+
+### Mathematically building a Neural Network
+
+In the previous post I told you how `weights` and `inputs` are multiplied, added with `bias` and activated with non-linearity like `relu`
+
+I also showed you how we 

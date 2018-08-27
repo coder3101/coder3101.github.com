@@ -5,11 +5,11 @@ categories: NeuralNets
 featured-img: CompleteNet
 ---
 
-In this post I will explain the complete Neural Network and the intuition about how a neural network learns from data.
+In this post, I will explain the complete Neural Network and the intuition about how a neural network learns from data.
 
-By the end of this post, you will have the in-depth understanding of forward propagation in a feed-forward neural network. I will focus on the math part as well and we will be using [numpy](https://pypi.org/project/numpy/) for numerical calculations in python. In the end, you will be able to implement the complete neural network with forward propagation.
+By the end of this post, you will have the in-depth understanding of forward propagation in a feed-forward neural network. I will focus on the math part as well and we will be using [numpy](https://pypi.org/project/numpy/) for numerical calculations in python. By the end, you will be able to implement the complete neural network with forward propagation.
 
-This post assumes that you have an basic understanding of activation functions and are familiar with terms like weights and biases. If all these seem alien to you. Read [this](https://coder3101.github.io/understanding-ff-nn/)  and come back here again.
+This post assumes that you have a basic understanding of activation functions and are familiar with terms like weights and biases. If all these seem alien to you read [this](https://coder3101.github.io/understanding-ff-nn/) and come back here again.
 
 ## A Neural Network 
 
@@ -21,20 +21,20 @@ This post assumes that you have an basic understanding of activation functions a
 
 As you are already familiar with what a single neuron computes from my previous post. When we arrange many such neurons such that each neuron gets same input values but have different weights they form a **Layer** (In above picture, Vertical Stack of Neurons is a Layer).
 
-All the layers apart from input and output layers are called **Hidden layers**.
+All the layers apart from input and output layers are called **Hidden Layers**.
 
 The layer that gets value from us is the **Input Layer**.
 
-The layer of Neurons that hold the ouput values by the network is the **Output Layer**. It can have any number of Neurons. In the picture above there is only one neuron in the output layer.
+The layer of Neurons that hold the output values by the network is the **Output Layer**. It can have any number of Neurons. In the picture above there is only one neuron in the output layer.
 
-The Un-activated value of a neuron is generally referred to as **Logits**. For Example In the last post we talked about Relu activation being applied to weighed sum, if we do not apply that relu the results we have is called logit.
+The Un-activated value of a neuron is generally referred to as **Logits**. For Example, In the last post, we talked about Relu activation being applied to weighted sum if we do not apply that relu the results we have are called logit.
 
 ### Some Properties of Layers
 
-- Activation Function used for all the neurons in a layer must be same. In a layer you should not apply relu to some neurons and some other activation function to other neurons. However, You can apply different activations in different layers.
-- Number of layers is directly proportional to learning capacity of the network.
-- You get the freedom to choose the number of hidden layers and number of neurons in each hidden layer (These things that are in your hand to change are sometimes called Hyper-parameters). But the Input Layer and Output Layer will be according to your Data.
-- No two neurons in the same layer are connected with others. Rather Every Neuron in a Layer is connected with all the other neurons from Previous Layer. This forms a dense connection of Weights. Hence such layers are also sometimes referred by name "Dense" in some programming frameworks.
+- Activation Function used for all the neurons in a layer must be the same. In a layer, you should not apply relu to some neurons and some other activation function to other neurons. However, You can apply different activations in different layers.
+- The number of layers is directly proportional to the learning capacity of the network
+- You have the freedom to choose the number of hidden layers and the number of neurons in each hidden layer (These things that are in your hand to change are sometimes called Hyper-parameters). But the Input Layer and Output Layer will be according to your Data.
+- No two neurons in the same layer are connected with others. Rather Every Neuron in a Layer is connected with all the other neurons from the Previous Layer. This forms a dense connection of Weights. Hence such layers are also sometimes referred by name "Dense" in some programming frameworks.
 
 
 
@@ -54,19 +54,19 @@ The Neural Network shown in the above picture is exactly this function $f$ . Our
 
 But How do we define that $f$ ?
 
-Remember the Complete Neural Network is just a collection of many neurons. So output of complete neural network depends on the output of each neuron.
+Remember the Complete Neural Network is just a collection of many neurons. So the output of the complete neural network depends on the output of each neuron.
 
-Now, a Neuron's output depend on 3 things (Weights,bias and Input). We cannot change the Input directly that is fixed. The only way to change the output is to change the weights and biases of individual neuron. Great, but how do we choose values of Weights and biases that gives the expected results. Here comes the training part, We use an algorithm called Gradient Descent that fine tunes the values of all weights and biases of the all the neurons. So, We Initially set some random values to weights and biases and let the training fine tune it for us. We will talk about Back Propagation and Gradient Descent in  some other Post.
+Now, a Neuron's output depends on 3 things (Weights, bias and Input). We cannot change the Input directly that is fixed. The only way to change the output is to change the weights and biases of an individual neuron. Great, but how do we choose values of Weights and biases that give the expected results. Here comes the training part, We use an algorithm called Gradient Descent that fine-tunes the values of all weights and biases of the all the neurons. So, We Initially set some random values to weights and biases and let the training fine tune it for us. We will talk about Back Propagation and Gradient Descent in some other Post.
 
-So choosing all the possible values of all the weights and biases will give us all possible definition of $f$. This way our Neural network can approximate all most all $f$, and thus it is called *Universal Function Approximator*
+So choosing all the possible values of all the weights and biases will give us all possible definition of f. This way our Neural network can approximate all most all f, and thus it is called *Universal Function Approximator*
 
-*Please Note : I do not mean the above Neural Network in the Picture can approximate all the functions. It will fail to approximate complex functions so to overcome this we build more sophisticated networks with Hundred of Layers and many neurons and with regularization*.
+*Please Note: I do not mean the above Neural Network in the Picture can approximate all the functions. It will fail to approximate complex functions so to overcome this we build more sophisticated networks with Hundred of Layers and many neurons and with regularization*.
 
 
 
 ## Building a Neural Network : The Math Part
 
-In the previous post I told you how `weights` and `inputs` are multiplied, added with `bias` and activated with non-linearity like `relu`
+In the previous post, I told you how `weights` and `inputs` are multiplied, added with `bias` and activated with non-linearity like `relu`
 
 I also showed you how we can do all those operations using Matrices and Vectors.
 
@@ -86,9 +86,9 @@ $X = \begin {bmatrix}x_1 & x_2 & x_3 & x_4 & x_5\end{bmatrix}_{1 \times 5}$
 
 </p>
 
-In the above picture you can see that We have $5 \times 3 = 15$ weights between Input Layer and Hiddent Layer. *The number of weights between two layers is the product of the number of neurons in those two layers*. Here In Input and Hidden Layer we have 3 and 5 Neurons so a total of 15 weights connect each neuron of Hidden layer with each neuron from Input Layer.
+In the above picture, you can see that We have $5 \times 3 = 15$ weights between Input Layer and Hidden Layer. *The number of weights between two layers is the product of the number of neurons in those two layers*. Here In Input and Hidden Layer, we have 3 and 5 Neurons so a total of 15 weights connect each neuron of the Hidden layer with each neuron from Input Layer.
 
-We can represent those Weights in matrix of $5 \times 3$ dimension. We call this Matrix $W_1$. Subscript 1 means First Weight Matrix.
+We can represent those Weights in the matrix of $5 \times 3$ dimensions. We call this Matrix $W_1$. Subscript 1 means First Weight Matrix.
 
 
 
@@ -100,7 +100,7 @@ $W_1 = \begin{bmatrix}w_1 & w_6 & w_{11} \\\ w_2 & w_7 & w_{12} \\\ w_3 & w_8 & 
 
  Okay All done.
 
-There is one more thing called bias. We know each Neuron in the Hidden Layer will have one bias term. Since there are three neuron we will have 3 bias values. Again We can pack them into a vector name $B_1$ as :
+There is one more thing called bias. We know each Neuron in the Hidden Layer will have one bias term. Since there are three neurons we will have 3 bias values. Again We can pack them into a vector name $B_1$ as :
 
 <p align="center">
 
@@ -162,7 +162,7 @@ Here each $a_n$ corresponds to the value of $n^{th}$ neuron of the hidden Layer.
 
 For the Next Layer this $A_1$ vector will behave like Input and will be passed.
 
-Following the same things as Above We create another Weight Matrix $W_2$ and $B_2$ and $A_1$ will act as Input. The dimension or shape of $W_2$ will be $1 \times 3$ and $B_2$ will be $1 \times 1$ .
+Following the same things as Above We create another Weight Matrix $W_2$ , bias Vector$B_2$ and $A_1$ will act as Input. The dimension or shape of $W_2$ will be $1 \times 3$ and $B_2$ will be $1 \times 1$ .
 
 So,
 
@@ -178,7 +178,7 @@ From Linear Algebra Rules again $A_2$ will be of dimension $1 \times 1$.
 
 You might think why didn't we used $Relu()$ ? Why $sigmoid()$ and what it is?
 
-Actually In reality For the last Layer we generally do not use Relu. In last layer We want to have our prediction and it will be a good idea that our predictions are in some tight range. So we Use a Function whose range is limited as per our choice and whose domain is all real numbers. One Such Activation function is $sigmoid()$ defined as 
+Actually, In reality, For the last Layer, we generally do not use Relu. In last layer, We want to have our prediction and it will be a good idea that our predictions are in some tight range. So we Use a Function whose range is limited as per our choice and whose domain is all real numbers. One Such Activation function is $sigmoid()$ defined as 
 
 <p align="center">
 
@@ -188,12 +188,12 @@ $\sigma$ is sigmoid function
 
 </p>
 
-An Important Property of this function is that it's range is $(0,1)$ . So it will limit our predictions in between 0 and 1.
+An Important Property of this function is that its range is $(0,1)$. So it will limit our predictions in between 0 and 1.
 
-You might ask : Do we have any more benefits of packing things in Matrices?
+You might ask: Do we have any more benefits of packing things in Matrices?
 
-- All the Operations like Dot Product and additions are all vectorized and uses Multi threading to speed up the computation. Specially great when it comes to Parallelism of GPU's.
-- You can do something called *batch processing* . You can pass multiple input stacked together in matrix. Recall Each Input is a vector, if you stack many Input vectors together you will get a Input Matrix. You can then feed all those Inputs at the same time and get back all the outputs at the same time. We will talk more about it in batch processing.
+- All the Operations like Dot Product and additions are all vectorized and uses Multithreading to speed up the computation. Especially great when it comes to Parallelism of GPU's.
+- You can do something called *batch processing*. You can pass multiple inputs stacked together in the matrix. Recall Each Input is a vector, if you stack many Input vectors together you will get a Input Matrix. You can then feed all those Inputs at the same time and get back all the outputs at the same time. We will talk more about it in batch processing.
 
 
 ## Building a Neural Network : The Code Part
@@ -278,9 +278,9 @@ def create_weights_and_biases():
 
 
 
-Now we have data and `weights`and `biases` . Its time to implement the do Maths magic. Let's begin Shall we?
+Now we have data and `weights`and `biases` . It's time to implement the Maths magic. Let's begin Shall we?
 
-There is a thing called [Broadcasting](https://docs.scipy.org/doc/numpy-1.13.0/user/basics.broadcasting.html) in numpy universe that enables vector and matrix addition or subtraction with at least one dimension in common or 1. Actually its much more than this but here it will help us in adding vector of biases with matrix.
+There is a thing called [Broadcasting](https://docs.scipy.org/doc/numpy-1.13.0/user/basics.broadcasting.html) in numpy universe that enables vector and matrix addition or subtraction with at least one dimension in common or 1. Actually, its much more than this but here it will help us in adding the vector of biases with the matrix.
 
 Finally Let's do Forward propagation (i.e From Input to Output)
 
@@ -312,7 +312,7 @@ print(forward_propagation(w,b,x))
 
 Our output prediction will not match with `y` for sure. Why??
 
-We have not trained out model yet, training is done using Back-propagation. It will be very much for this post. So What's in the training that causes our Neural network to produce desired results. It is the values of biases and weights. Here we are using random values of weights and biases and hence we are getting random outputs.
+We have not trained our model yet, training is done using Back-propagation. It will be very much for this post. So What's in the training that causes our Neural network to produce desired results. It is the values of biases and weights. Here we are using random values of weights and biases and hence we are getting random outputs.
 
 You will get a different output when running above code. We got :
 
@@ -327,7 +327,7 @@ Clearly Nowhere near the desired values.
 
 Let's give those weights and matrices some great values that will generate correct predictions.
 
-*Please Note : These Values were computed using tensorflow*
+*Please Note: These Values were computed using tensorflow*
 
 ```python
 def trained_weights_and_biases():
@@ -358,7 +358,7 @@ def trained_weights_and_biases():
     return weights, biases
 ```
 
-Now Let's run our Neural Network with these new Values of weights and biases.
+Now Let's run our Neural Network with these new values of weights and biases.
 
 ```python
 w, b = trained_weights_and_biases()
@@ -384,4 +384,6 @@ $\large{\frac{1 + 6 + 2}{10} \approx 0.93 }$
 
 </p>
 
-Hurray!!! We Just built a Neural Network that works
+Hurray!!! We Just built a Neural Network that works...
+
+In my next post, I will talk about the Back-propagation and Loss functions and strategy to optimize the loss.

@@ -108,15 +108,11 @@ $B_1 = \begin{bmatrix}b_1 & b_2 & b_3\end{bmatrix}_{1\times3}$
 
 </p>
 
-All done we have packed all the things in Vectors and Matrices. Now, Let's multiply, add and activate. Same way as we did it earlier except that this time on Matrices and vectors.
+All done we have packed all the things in Vectors and Matrices. Now, Let's multiply (dot product), add and activate. Same way as we did it earlier except that this time on Matrices and vectors.
 
 <p align="center">
 
 $Z_1 = X . W_1 + B_1$ 
-
-<br>
-
-$.$ is the dot product or of the matrices.
 
 </p>
 

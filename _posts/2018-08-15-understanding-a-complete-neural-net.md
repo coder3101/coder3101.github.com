@@ -134,7 +134,7 @@ $z_1 = w_1 * x_1 + w_2 * x_2 +  .... +  w_5 * x_5  + b_1$
 
 </p> 
 
-Similarly for $z_2$ and  $z_3 $ we use weights different weights.
+Similarly for $z_2$ and  $z_3 $
 
 Now We only need to Apply $Relu$ activation to $Z_1$ as 
 
@@ -142,7 +142,7 @@ Now We only need to Apply $Relu$ activation to $Z_1$ as
 
 $A_1 = Relu(Z_1)$
 
-$Relu$ applies acivation to each element in the $Z_1$
+$Relu$ applies activation to each element in $Z_1$
 
 </p>
 
@@ -154,7 +154,7 @@ $A_1 = \begin{bmatrix}a_1 & a_2 & a_3\end{bmatrix}_{1\times3}$
 
 </p>
 
-Here each $a_n$ corresponds to the value of $n^{th}$ neuron of the hidden Layer. As we had only three Neurons in the hidden layer we got three values in $A_1$.
+Here $a_n$ corresponds to the value of $n^{th}$ neuron of the hidden Layer. As we had only three Neurons in the hidden layer we got three values in $A_1$.
 
 For the Next Layer this $A_1$ vector will behave like Input and will be passed.
 

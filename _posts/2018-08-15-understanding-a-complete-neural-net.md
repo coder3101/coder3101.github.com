@@ -126,7 +126,7 @@ $Z_1 = \begin{bmatrix}z_1 & z_2 & z_3 \end{bmatrix}_{1\times3}$
 
 </p>
 
-Here if you expand $z_1$
+Expanding $z_1$
 
 <p align="center">
 
@@ -134,9 +134,7 @@ $z_1 = w_1 * x_1 + w_2 * x_2 +  .... +  w_5 * x_5  + b_1$
 
 </p> 
 
-Similarly for $z_2$ and  $z_3 $
-
-Now We only need to Apply $Relu$ activation to $Z_1$ as 
+We now need to Apply $Relu$ activation to $Z_1$ as 
 
 <p align="center">
 
@@ -164,6 +162,8 @@ So,
 
 $Z_2 = W_2 . A_1 + B_2$
 
+<br>
+
 $A_2 = sigmoid(Z_2)$
 
 </p>
@@ -178,7 +178,7 @@ Actually, In reality, For the last Layer, we generally do not use Relu. In last 
 
 $$\Large{\sigma(x) = \frac{1}{1+e^{-x}}}$$
 
-$\sigma​$ is sigmoid function
+$\sigma$ is sigmoid function
 
 </p>
 

@@ -74,7 +74,7 @@ Consider this Simple Neural Network.
 
 <p align="center">
 
-<img src="https://github.com/coder3101/coder3101.github.com/raw/master/in-post_imgs/understanding-a-complete-neural-net/sample-net.jpg" width="60%" height="70%"/>
+<img src="https://github.com/coder3101/coder3101.github.com/raw/master/in-post_imgs/understanding-a-complete-neural-net/sample-net.jpg" width="40%" height="70%"/>
 
 </p>
 

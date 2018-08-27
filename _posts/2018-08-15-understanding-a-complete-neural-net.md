@@ -383,3 +383,5 @@ $\large{\frac{1 + 6 + 2}{10} \approx 0.93 }$
 Hurray!!! We Just built a Neural Network that works...
 
 In my next post, I will talk about the Back-propagation and Loss functions and strategy to optimize the loss.
+
+**[Here](https://github.com/coder3101/coder3101.github.com/blob/master/in-post_codes/understanding-a-complete-neural-net/post2.py) is the complete code of this post**

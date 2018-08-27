@@ -237,7 +237,7 @@ def get_dummy_data():
                   [1,1,1],
                   [4,5,1],
                   [0,0,1],
-		          [1,2,3],
+		   [1,2,3],
                   [3,1,1],
                   [2,2,1],
                   [1,0,0]])
@@ -252,7 +252,7 @@ Setting weights to zero causes the problem of Network Symmetry. Every Neuron wil
 ```python
 def create_weights_and_biases():
     """
-    creates weights and biases with random and zero values of appropriate 		shapes or dimensions
+    creates weights and biases with random and zero values of appropriate shapes or dimensions
     """
     weights = []
     biases = []
@@ -373,6 +373,8 @@ These predictions are pretty close to actual expectations
 <p align="center">
 
 $\large{\frac{0 + 3 + 1}{10} \approx 0.45 }$
+
+<br><br>
 
 $\large{\frac{1 + 6 + 2}{10} \approx 0.93 }$
 

@@ -11,7 +11,7 @@ By the end of this post, you will have the in-depth understanding of forward pro
 
 This post assumes that you have an basic understanding of activation functions and are familiar with terms like weights and biases. If all these seem alien to you. Read [this](https://coder3101.github.io/understanding-ff-nn/)  and come back here again.
 
-### A Neural Network 
+## A Neural Network 
 
 <p align="center"><img src="https://github.com/coder3101/coder3101.github.com/raw/master/in-post_imgs/understanding-a-complete-neural-net/full-complete-net.jpg" width="70%" />
 
@@ -38,7 +38,7 @@ The Un-activated value of a neuron is generally referred to as **Logits**. For E
 
 
 
-### Neural Network as Universal Function Approximator
+## Neural Network as Universal Function Approximator
 
 If you hold a mathematical background you might be familiar with this :
 
@@ -64,8 +64,16 @@ So choosing all the possible values of all the weights and biases will give us a
 
 
 
-### Mathematically building a Neural Network
+## Building a Neural Network : The Math Part
 
 In the previous post I told you how `weights` and `inputs` are multiplied, added with `bias` and activated with non-linearity like `relu`
 
-I also showed you how we 
+I also showed you how we can do all those operations using Matrices.
+
+Consider this Simple Neural Network.
+
+<p align="center">
+
+<img src="https://github.com/coder3101/coder3101.github.com/raw/master/in-post_imgs/understanding-a-complete-neural-net/simple-net.jpg"/>
+
+</p>

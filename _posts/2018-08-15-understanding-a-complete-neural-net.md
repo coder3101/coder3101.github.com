@@ -142,8 +142,6 @@ Now We only need to Apply $Relu$ activation to $Z_1$ as
 
 $A_1 = Relu(Z_1)$
 
-$Relu$ applies activation to each element in $Z_1$
-
 </p>
 
 In the end We have, 
@@ -178,9 +176,9 @@ Actually, In reality, For the last Layer, we generally do not use Relu. In last 
 
 <p align="center">
 
-$$\huge{\sigma(x) = \frac{1}{1+e^{-x}}}$$
+$$\Large{\sigma(x) = \frac{1}{1+e^{-x}}}$$
 
-$\sigma$ is sigmoid function
+$\sigma​$ is sigmoid function
 
 </p>
 

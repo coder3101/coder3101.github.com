@@ -376,7 +376,7 @@ $\large{\frac{0 + 3 + 1}{10} \approx 0.45 }$
 
 <br><br>
 
-$\large{\frac{1 + 6 + 2}{10} \approx 0.93 }$
+$\large{\frac{1 + 6 + 2}{10} \approx 0.93 }​$
 
 </p>
 

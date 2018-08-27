@@ -74,7 +74,7 @@ Consider this Simple Neural Network.
 
 <p align="center">
 
-<img src="https://github.com/coder3101/coder3101.github.com/raw/master/in-post_imgs/understanding-a-complete-neural-net/sample-net.jpg"/>
+<img src="https://github.com/coder3101/coder3101.github.com/raw/master/in-post_imgs/understanding-a-complete-neural-net/sample-net.jpg" width="60%" height="70%"/>
 
 </p>
 
@@ -113,6 +113,8 @@ All done we have packed all the things in Vectors and Matrices. Now, Let's multi
 <p align="center">
 
 $Z_1 = X . W_1 + B_1$ 
+
+<br>
 
 $.$ is the dot product or of the matrices.
 

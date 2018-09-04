@@ -1,15 +1,15 @@
 ---
 mathjax: true
 title: Understanding a Complete Neural Network
-categories: NeuralNets
+categories: NeuralNets verybasic
 featured-img: CompleteNet
 ---
 
-In this post, I will explain the complete Neural Network and the intuition about how a neural network learns from data.
+Today, I will explain the complete Neural Network and the intuition about how a neural network learns from data.
 
 By the end of this post, you will have the in-depth understanding of forward propagation in a feed-forward neural network. I will focus on the math part as well and we will be using [numpy](https://pypi.org/project/numpy/) for numerical calculations in python. By the end, you will be able to implement the complete neural network with forward propagation.
 
-This post assumes that you have a basic understanding of activation functions and are familiar with terms like weights and biases. If all these seem alien to you read [this](https://coder3101.github.io/understanding-ff-nn/) and come back here again.
+This post assumes that you have basic understanding of activation functions and are familiar with terms like weights and biases. If all these seem alien to you read [this](https://coder3101.github.io/understanding-ff-nn/) and come back here again.
 
 ## A Neural Network 
 
@@ -26,8 +26,6 @@ All the layers apart from input and output layers are called **Hidden Layers**.
 The layer that gets value from us is the **Input Layer**.
 
 The layer of Neurons that hold the output values by the network is the **Output Layer**. It can have any number of Neurons. In the picture above there is only one neuron in the output layer.
-
-The Un-activated value of a neuron is generally referred to as **Logits**. For Example, In the last post, we talked about Relu activation being applied to weighted sum if we do not apply that relu the results we have are called logit.
 
 ### Some Properties of Layers
 
@@ -56,7 +54,7 @@ But How do we define that $f$ ?
 
 Remember the Complete Neural Network is just a collection of many neurons. So the output of the complete neural network depends on the output of each neuron.
 
-Now, a Neuron's output depends on 3 things (Weights, bias and Input). We cannot change the Input directly that is fixed. The only way to change the output is to change the weights and biases of an individual neuron. Great, but how do we choose values of Weights and biases that give the expected results. Here comes the training part, We use an algorithm called Gradient Descent that fine-tunes the values of all weights and biases of the all the neurons. So, We Initially set some random values to weights and biases and let the training fine tune it for us. We will talk about Back Propagation and Gradient Descent in some other Post.
+Also a Neuron's output depends on 3 things (Weights, bias and Input). We cannot change the Input that is fixed. The only way to change the output is to change the weights and biases of an individual neuron. Great, but how do we choose values of Weights and biases that give the expected results. Here comes the training part, We use an algorithm called Gradient Descent that fine-tunes the values of all weights and biases of the all the neurons. So, We Initially set some random values to weights and biases and let the training fine tune it for us. We will talk more about Back Propagation and Gradient Descent in some other Post.
 
 So choosing all the possible values of all the weights and biases will give us all possible definition of f. This way our Neural network can approximate all most all f, and thus it is called *Universal Function Approximator*
 
@@ -64,7 +62,7 @@ So choosing all the possible values of all the weights and biases will give us a
 
 
 
-## Building a Neural Network : The Math Part
+## Building a Neural Network : Math
 
 In the previous post, I told you how `weights` and `inputs` are multiplied, added with `bias` and activated with non-linearity like `relu`
 
@@ -86,7 +84,7 @@ $X = \begin {bmatrix}x_1 & x_2 & x_3 & x_4 & x_5\end{bmatrix}_{1 \times 5}$
 
 </p>
 
-In the above picture, you can see that We have $5 \times 3 = 15$ weights between Input Layer and Hidden Layer. *The number of weights between two layers is the product of the number of neurons in those two layers*. Here In Input and Hidden Layer, we have 3 and 5 Neurons so a total of 15 weights connect each neuron of the Hidden layer with each neuron from Input Layer.
+In the above picture, you can see that We have $5 \times 3 = 15$ weights between Input Layer and Hidden Layer. *The number of weights between two layers is the product of the number of neurons in those two layers*. 
 
 We can represent those Weights in the matrix of $5 \times 3$ dimensions. We call this Matrix $W_1$. Subscript 1 means First Weight Matrix.
 
@@ -108,7 +106,7 @@ $B_1 = \begin{bmatrix}b_1 & b_2 & b_3\end{bmatrix}_{1\times3}$
 
 </p>
 
-All done we have packed all the things in Vectors and Matrices. Now, Let's multiply (dot product), add and activate. Same way as we did it earlier except that this time on Matrices and vectors.
+All done we have packed all the things in Vectors and Matrices. Now, ***Let's multiply (dot product), add and activate***.
 
 <p align="center">
 
@@ -118,7 +116,7 @@ $Z_1 = X . W_1 + B_1$
 
 From Simple Linear Algebra $Z_1$ will be a Matrix of $1 \times 3$ dimensions
 
-So, 
+So Let $Z_1$ be a vector like, 
 
 <p align="center">
 
@@ -126,11 +124,11 @@ $Z_1 = \begin{bmatrix}z_1 & z_2 & z_3 \end{bmatrix}_{1\times3}$
 
 </p>
 
-Expanding $z_1$
+If you expand $z_1$ . You will find it to be quivalent to something like
 
 <p align="center">
 
-$z_1 = w_1 * x_1 + w_2 * x_2 +  .... +  w_5 * x_5  + b_1$
+$z_1 = (w_1 * x_1 + w_2 * x_2 +  .... +  w_5 * x_5)  + b_1$
 
 </p> 
 
@@ -152,7 +150,7 @@ $A_1 = \begin{bmatrix}a_1 & a_2 & a_3\end{bmatrix}_{1\times3}$
 
 Here $a_n$ corresponds to the value of $n^{th}$ neuron of the hidden Layer. As we had only three Neurons in the hidden layer we got three values in $A_1$.
 
-For the Next Layer this $A_1$ vector will behave like Input and will be passed.
+***For the Next Layer this $A_1$ vector will behave like Input and will be passed***.
 
 Following the same things as Above We create another Weight Matrix $W_2$ , bias Vector$B_2$ and $A_1$ will act as Input. The dimension or shape of $W_2$ will be $1 \times 3$ and $B_2$ will be $1 \times 1$ .
 
@@ -172,7 +170,7 @@ From Linear Algebra Rules again $A_2$ will be of dimension $1 \times 1$.
 
 You might think why didn't we used $Relu()$ ? Why $sigmoid()$ and what it is?
 
-Actually, In reality, For the last Layer, we generally do not use Relu. In last layer, We want to have our prediction and it will be a good idea that our predictions are in some tight range. So we Use a Function whose range is limited as per our choice and whose domain is all real numbers. One Such Activation function is $sigmoid()$ defined as 
+Actually,  for the last Layer, we generally do not use Relu. In last layer, We want to have our prediction and it will be a good idea that our predictions are in some tight range. So we Use a Function whose range is limited as per our choice and whose domain is all real numbers. One Such Activation function is $sigmoid()$ defined as 
 
 <p align="center">
 
@@ -187,10 +185,10 @@ An Important Property of this function is that its range is $(0,1)$. So it will 
 You might ask: Do we have any more benefits of packing things in Matrices?
 
 - All the Operations like Dot Product and additions are all vectorized and uses Multithreading to speed up the computation. Especially great when it comes to Parallelism of GPU's.
-- You can do something called *batch processing*. You can pass multiple inputs stacked together in the matrix. Recall Each Input is a vector, if you stack many Input vectors together you will get a Input Matrix. You can then feed all those Inputs at the same time and get back all the outputs at the same time. We will talk more about it in batch processing.
+- You can do something called *batch processing*. You can pass multiple inputs stacked together in the matrix. Recall Each Input is a vector, if you stack many Input vectors together you will get a Input Matrix. You can then feed all those Inputs at the same time and get back all the outputs at the same time. We will talk more about it in batch processing. 
 
 
-## Building a Neural Network : The Code Part
+## Building a Neural Network : Code 
 
 You are ready to implement you very first Neural network using [numpy](https://pypi.org/project/numpy/) .
 
@@ -270,10 +268,6 @@ def create_weights_and_biases():
     return weights, biases
 ```
 
-
-
-Now we have data and `weights`and `biases` . It's time to implement the Maths magic. Let's begin Shall we?
-
 There is a thing called [Broadcasting](https://docs.scipy.org/doc/numpy-1.13.0/user/basics.broadcasting.html) in numpy universe that enables vector and matrix addition or subtraction with at least one dimension in common or 1. Actually, its much more than this but here it will help us in adding the vector of biases with the matrix.
 
 Finally Let's do Forward propagation (i.e From Input to Output)
@@ -282,19 +276,12 @@ Finally Let's do Forward propagation (i.e From Input to Output)
 def forward_propagation(weights, biases, x):
     """ returns the prediction of the neural network for given input x
     """
-    num_layers = len(weights)
-    activation = None
-    for i in range(num_layers):
-        if i == 0: # First Layer's Input will be x
-    		activation = relu(np.dot(x, weights[i]) + biases[i])
-        elif i == num_layers-1: # For Last Layer apply sigmoid
-            activation = sigmoid(np.dot(activation, weights[i]) + biases[i])
-        else:
-            activation = relu(np.dot(activation, weights[i]) + biases[i])
+    activation = relu(np.dot(x, weights[0]) + biases[0]
+    activation = relu(np.dot(activation, weights[1]) + biases[1])
+    activation = sigmoid(np.dot(activation, weights[2]) + biases[2])
+                      
     return activation
 ```
-
-Note : In above code `activation = relu(np.dot(x, weights[i]) + biases[i])` `np.dot(x, weights[0])` will give a matrix of dimension $8 \times 4$ and this  result is added with `biases[0]` whose dimension is $1 \times 4$ . This addition was made possible by Broadcasting.
 
 Now Let's put together all the functions and See what our Model predicts
 
@@ -306,9 +293,9 @@ print(forward_propagation(w,b,x))
 
 Our output prediction will not match with `y` for sure. Why??
 
-We have not trained our model yet, training is done using Back-propagation. It will be very much for this post. So What's in the training that causes our Neural network to produce desired results. It is the values of biases and weights. Here we are using random values of weights and biases and hence we are getting random outputs.
+We have not trained our model yet, training is done using Back-propagation.  So What's in the training that causes our Neural network to produce desired results. It is the values of biases and weights. Here we are using random values of weights and biases and hence we are getting random outputs.
 
-You will get a different output when running above code. We got :
+You will get a different output we got :
 
 ```python
 [[5.41388530e-22]
@@ -317,11 +304,13 @@ You will get a different output when running above code. We got :
  [1.49225762e-03]]
 ```
 
-Clearly Nowhere near the desired values.
+Clearly No where near the desired values.
 
 Let's give those weights and matrices some great values that will generate correct predictions.
 
 *Please Note: These Values were computed using tensorflow*
+
+**Simply copy paste this cell's function**
 
 ```python
 def trained_weights_and_biases():

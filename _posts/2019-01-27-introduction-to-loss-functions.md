@@ -38,21 +38,19 @@ Depending upon the type of problem that we are optimizing our neural network for
 
 ### Types of Regression Losses 
 
-<i>
-
- $y_i$ will be a vector of expected/correct output
 
 
-
- $h_i$ will be a vector of predictions produced by the neural network. Recall that this is the value of the output layer of the network.
+> > $y_i$ will be a vector of expected/correct output
 
 
 
- $n$ is the dimension of the vector. i.e Number of elements in the vector
+> > $h_i$ will be a vector of predictions produced by the neural network. Recall that this is the value of the output layer of the network.
 
 
 
-</i>
+> > $n$ is the dimension of the vector. i.e Number of elements in the vector
+
+
 
 - **Mean Squared Error** (MSE) or Quadratic Loss or L2 Loss
 
@@ -170,9 +168,13 @@ You must be wondering what we started this blog with, Cost Functions but discuss
 And from above we came to know that Loss is generated for each prediction. So, the value of losses generated is also more than one. Cost Functions are aggregate of Loss Functions. When we have multiple values of the loss, we take their mean and get a single number that is called **Cost** which determines how our network performed on a mini-batch. It is this Cost which we want to minimize, doing so we minimize the loss because it is nothing but aggregated loss.
 
 Mathematically, 
+
+
 $$
 CostFunction = \frac{\sum_{i=0}^mLoss(y_{mi}, h_{mi})}{m}
 $$
+
+
 Here $Loss$ is any Loss Function discussed above and $m$ size of the mini batch. If you don't have any idea about mini-batches, read my previous post.
 
 

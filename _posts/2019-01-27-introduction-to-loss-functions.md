@@ -38,15 +38,21 @@ Depending upon the type of problem that we are optimizing our neural network for
 
 ### Types of Regression Losses 
 
-<BLOCKQUOTE>
+<i>
 
  $y_i$ will be a vector of expected/correct output
 
+
+
  $h_i$ will be a vector of predictions produced by the neural network. Recall that this is the value of the output layer of the network.
+
+
 
  $n$ is the dimension of the vector. i.e Number of elements in the vector
 
-</BLOCKQUOTE>
+
+
+</i>
 
 - **Mean Squared Error** (MSE) or Quadratic Loss or L2 Loss
 
@@ -131,9 +137,13 @@ def mean_bias_error(y, h):
 ### Classification Loss
 
 Although there are many classification losses, We will discuss only one major loss that is used almost everywhere these days called **Cross Entropy Loss**
+
+
 $$
 CrossEntropyLoss_i = -{[y_ilog(h_i) + (1-y_i)log(1-h_i)]}
 $$
+
+
 Here $y_i$ is $i^{th}$ value of expected output and $h_i$ is $i^{th}$ value of the produced vector. In this $n$ is the number of total classification classes.
 
 This one is a bit difficult to understand so I will explain it in detail.
@@ -170,4 +180,3 @@ Here $Loss$ is any Loss Function discussed above and $m$ size of the mini batch.
 Some other day, We will discuss **Backpropagation** and **Gradient Descent** where we will talk about how do we exactly decrease this *Cost* during training.
 
 Happy Learning
-

@@ -38,11 +38,15 @@ Depending upon the type of problem that we are optimizing our neural network for
 
 ### Types of Regression Losses 
 
-> $y_i$ will be a vector of expected/correct output
->
-> $h_i$ will be a vector of predictions produced by the neural network. Recall that this is the value of the output layer of the network.
->
-> $n$ is the dimension of the vector. i.e Number of elements in the vector
+<BLOCKQUOTE>
+
+ $y_i$ will be a vector of expected/correct output
+
+ $h_i$ will be a vector of predictions produced by the neural network. Recall that this is the value of the output layer of the network.
+
+ $n$ is the dimension of the vector. i.e Number of elements in the vector
+
+</BLOCKQUOTE>
 
 - **Mean Squared Error** (MSE) or Quadratic Loss or L2 Loss
 
@@ -53,9 +57,13 @@ Depending upon the type of problem that we are optimizing our neural network for
   
 
 **Mean Square Error** 
+
+
 $$
 Mean Square Error = \frac{\sum_{i=1}^n(y_i - h_i)^2}{n}
 $$
+
+
 It is most commonly used Regression Error. It is measured as the average of the squared difference between predictions and actual observations. 
 
 ```python
@@ -72,9 +80,13 @@ def mean_squared_error(y, h):
 
 
 **Mean Absolute Error**
+
+
 $$
 Mean Absolute Error = \frac{\sum_{i=1}^n|y_i - h_i |}{n}
 $$
+
+
 It is measured as the average of the sum of absolute differences between predictions and actual observations.
 
 ```python
@@ -91,9 +103,13 @@ def mean_absolute_error(y, h):
 
 
 **Mean Bias Error**
+
+
 $$
 Mean Bias Error = \frac{\sum_{i=1}^n(y_i - h_i )}{n}
 $$
+
+
 It is much less commonly used loss function. This is the same as MSE with the only difference that we don’t take absolute values. Clearly, there’s a need for caution as positive and negative errors could cancel each other out. Although less accurate in practice, it could determine if the model has a positive bias or negative bias.
 
 
@@ -154,3 +170,4 @@ Here $Loss$ is any Loss Function discussed above and $m$ size of the mini batch.
 Some other day, We will discuss **Backpropagation** and **Gradient Descent** where we will talk about how do we exactly decrease this *Cost* during training.
 
 Happy Learning
+

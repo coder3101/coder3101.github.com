@@ -1,6 +1,6 @@
 ---
 title: Understanding a Neuron in Neural Networks
-categories: NeuralNets VeryBasic
+categories: NeuralNets
 mathjax: true
 featured-img: sleek
 ---

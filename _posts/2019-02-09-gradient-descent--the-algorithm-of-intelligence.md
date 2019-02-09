@@ -35,7 +35,7 @@ Just remember, **Forward Pass gives output while Backward Pass updates weights a
 
  *This is Optional for those who know derivatives*
 
-Derivatives are just mathematical representations of the rate of change of output with respect to the input. When we write $$\LARGE\frac{dy}{dx}​$$ , It represents the *rate of change of y with respect to x*
+Derivatives are just mathematical representations of the rate of change of output with respect to the input. When we write $$ \large\frac {dy}{dx}​$$ , It represents the *rate of change of y with respect to x*
 
 For Example, Say we have a Function :
 
@@ -45,5 +45,5 @@ For Example, Say we have a Function :
 
 *Note : $y$ is the output of the $f$*
 
-If you wanted to know how does $y$ changes when $x$ changes. You are likely to find the derivative of this function. In this case it will be $5$ . So we will write $$\LARGE\frac{dy}{dx} = 5$$It implies if we increase, $x$ by 2, the value of $y$ increases to 10 (5 times the value increase in $x$).  If this value of derivative were to be negative, it means, if x increases, y decreases. The value of this derivative depends upon the function and point of evaluation. We won't talk more about it here although it is recommended you should know more about Derivatives, Have a look at [Khan Academy's Derivative Course](https://www.khanacademy.org/math/differential-calculus/dc-diff-intro) 
+If you wanted to know how does $y$ changes when $x$ changes. You are likely to find the derivative of this function. In this case it will be $5$ . So we will write $$\large \frac{dy}{dx} = 5$$. It implies if we increase, $x$ by 2, the value of $y$ increases to 10 (5 times the value increase in $x$).  If this value of derivative were to be negative, it means, if x increases, y decreases. The value of this derivative depends upon the function and point of evaluation. We won't talk more about it here although it is recommended you should know more about Derivatives, Have a look at [Khan Academy's Derivative Course](https://www.khanacademy.org/math/differential-calculus/dc-diff-intro) 
 

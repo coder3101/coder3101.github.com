@@ -1,7 +1,7 @@
 ---
 mathjax: true
 title: Understanding a Complete Neural Network
-categories: NeuralNets verybasic
+categories: NeuralNets
 featured-img: CompleteNet
 ---
 

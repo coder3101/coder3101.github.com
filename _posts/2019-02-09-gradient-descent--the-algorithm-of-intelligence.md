@@ -15,3 +15,11 @@ Before we begin it is very important that you must know where a neural network h
 
 ## Backpropagation
 
+We talked about Forward Propagation in [this](https://coder3101.github.io/understanding-a-complete-neural-net/) post. Forward Propagation is the pass in which computation flowed from input layer to output layer. "*input times weight, add a bias, activate*" , this statement beautifully describes what  forward pass/propagation actually does. For More you can read [this](https://coder3101.github.io/understanding-a-complete-neural-net/) post.
+
+Today we will talk about Backward pass or Back Propagation. As evident from the name it is opposite to forward propagation. **The computation flow from the output layer to the input layer**, updating all the weights and biases of the network in such a way that minimises the loss of the network. Here is what actually happens "*output gives loss, propagate it up-to input, update all parameters in the path*". 
+
+<center>
+    <img src="https://raw.githubusercontent.com/coder3101/coder3101.github.com/master/in-post_imgs/gradient-descent-algorithm-of-intelligence/backward_forward.png">
+</center>
+

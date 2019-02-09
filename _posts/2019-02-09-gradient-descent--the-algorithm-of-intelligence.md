@@ -2,8 +2,7 @@
 mathjax: true
 title: Gradient Descent - The Algorithm of Intelligence
 categories: NeuralNets
-featured_img: gradient_descent
-
+featured-img: gradient_descent
 ---
 
 In the last post we learned about loss functions that help us determine how well or poor our neural networks are performing. However We did not talked about how to cause our neural neural network to minimise that loss. In this post we will talk about Gradient descent Algorithm which slowly reduces the loss of our model. It is no big deal, you just need some basics of Derivatives and what they actually represent. It will be very good if you know these things, but if you don't you can still follow.

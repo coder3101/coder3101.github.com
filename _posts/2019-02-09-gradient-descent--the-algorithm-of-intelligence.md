@@ -13,7 +13,7 @@ Before we begin it is very important that you must know where a neural network h
 
 
 
-## Backpropagation
+## Backpropagationb
 
 We talked about Forward Propagation in [this](https://coder3101.github.io/understanding-a-complete-neural-net/) post. Forward Propagation is the pass in which data flows from input layer to output layer. "*input times weight, add a bias, activate*" , this statement beautifully describes what  forward pass/propagation does. For More you can read [this](https://coder3101.github.io/understanding-a-complete-neural-net/) post.
 
